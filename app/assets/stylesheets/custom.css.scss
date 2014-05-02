@@ -1,6 +1,13 @@
 
 // Variables ///////////////////////////////
 
+// Colors
+$gray-light: lighten(#000, 60%);
+$gray-lighter: lighten(#000, 90%);
+// $gray: lighten(#000, 33.5%);
+// $gray-dark: lighten(#000, 20%);
+// $gray-darker: lighten(#000, 13.5%);
+
 // Typography
 $headings-line-height: 1;
 $font-size-h1: 3em;
@@ -13,43 +20,42 @@ $line-height-base: 1.7;
 // Global //////////////////////////////////
 
 html {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 body {
-  padding-top: 70px; // For fixed navbar
+    padding-top: 70px; // For fixed navbar
 }
 
 section {
-  overflow: auto;
+    overflow: auto;
 }
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
 .center {
-  text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+    text-align: center;    
+    h1 {
+      margin-bottom: 10px;
+    }  
 }
 
 // Typography //////////////////////////////////
 
 h1 {
-  // font-size: 3em;
-  letter-spacing: -2px;
-  text-align: center;
+    // font-size: 3em;
+    letter-spacing: -2px;
+    text-align: center;
 }
 
 h2 {
-  // font-size: 1.2em;
-  letter-spacing: -1px;
-  text-align: center;
-  font-weight: normal;
-  color: #999;
+    // font-size: 1.2em;
+    letter-spacing: -1px;
+    text-align: center;
+    font-weight: normal;
+    color: $gray-light;
 }
 
 h1, h2 {
@@ -57,8 +63,8 @@ h1, h2 {
 }
 
 p {
-  // font-size: 1.1em;
-  // line-height: 1.7em;
+    // font-size: 1.1em;
+    // line-height: 1.7em;
 }
 
 a, a:hover {
@@ -68,41 +74,40 @@ a, a:hover {
 // Header /////////////////////////////
 
 #logo {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.7em;
-  letter-spacing: -1px;  
-  font-weight: bold;
-  line-height: 1;
-}
-
-#logo:hover {
-  color: darken(#fff, 15%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    letter-spacing: -1px;  
+    font-weight: bold;
+    line-height: 1;
+    &:hover {
+        color: darken(#fff, 15%);
+    }    
 }
 
 // Footer /////////////////////////////
 
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid $gray-lighter;
-  margin-top: 45px;
-  color: $gray-light;
-}
-
-footer a {
-  color: $gray;
-}
-
-footer a:hover {
-  color: $gray-darker;
-}
-
-footer ul {
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 10px;
+    height: 60px;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid $gray-lighter;
+    margin-top: 45px;
+    color: $gray-light;       
+    a { 
+        color: $gray;         
+        &:hover { 
+            color: $gray-darker; 
+        }
+    }
+    ul {
+        list-style: none;
+        li {
+            float: left;
+            a { 
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
 }
