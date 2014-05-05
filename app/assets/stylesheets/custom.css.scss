@@ -17,6 +17,13 @@ $line-height-base: 1.7;
 
 @import "bootstrap";
 
+// Mixins
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 // Global //////////////////////////////////
 
 html {
@@ -110,4 +117,14 @@ a, a:hover {
             }
         }
     }
+}
+
+// Miscellaneous //////////////////////////////////////
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
