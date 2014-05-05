@@ -7,6 +7,7 @@ gem 'pg', '0.15.1'
 gem 'sass-rails', '4.0.1'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'sprockets', '2.11.0'
+gem 'bcrypt-ruby', '3.1.2'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
@@ -17,7 +18,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
+  gem 'selenium-webdriver', '~> 2.35.1'
   gem 'capybara', '2.1.0'
   gem 'growl', '1.0.3'
 end
