@@ -3,17 +3,19 @@
 
 <div class="row">
     <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-        <%= form_for(:session, url: sessions_path) do |f| %>
+        <%= form_tag sessions_path do %>
 
             <div class="form-group">
-                <%= f.text_field :email, class: 'form-control', placeholder: 'Email' %>
+                <%= label_tag :email %>
+                <%= text_field_tag :email, class: 'form-control', placeholder: 'Email' %>
             </div>
 
             <div class="form-group">
-                <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+                <%= label_tag :password %>
+                <%= password_field_tag :password, class: 'form-control', placeholder: 'Password' %>
             </div>
 
-            <%= f.submit "Sign in", class: "btn btn-lg btn-primary btn-block" %>
+            <%= submit_tag "Sign in", class: "btn btn-lg btn-primary btn-block" %>
         <% end %>
 
         <br />
