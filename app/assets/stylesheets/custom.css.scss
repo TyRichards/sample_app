@@ -15,6 +15,9 @@ $font-size-h2: 1.2em;
 $font-size-base: 14px;
 $line-height-base: 1.7;
 
+// Brand Colors
+$brand-danger: #a94442;
+
 @import "bootstrap";
 
 // Mixins
@@ -152,7 +155,12 @@ input, textarea, select, .uneditable-input {
 	}
 }
 
-.field_with_errors { @extend .form-group; @extend .has-error; }
+.field_with_errors { 
+	@extend .has-error; 
+	label {
+		color: $brand-danger;
+	}
+}
 
 // Misc //////////////////////////////////////
 
@@ -166,4 +174,8 @@ input, textarea, select, .uneditable-input {
 
 .alert-error {
 	@extend .alert-danger;
+}
+
+.alert-notice {
+	@extend .alert-warning;
 }
