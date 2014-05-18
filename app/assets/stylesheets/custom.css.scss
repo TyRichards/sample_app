@@ -42,6 +42,8 @@ textarea { resize: vertical; }
 	h1 { margin-bottom: 10px; }  
 }
 
+ol, ul { -webkit-padding-start: 0; }
+
 // Typography //////////////////////////////////
 
 h1 {
@@ -175,6 +177,33 @@ input, textarea, select, .uneditable-input {
 		  border-bottom: 1px solid $gray-lighter;
 		}
 	}
+}
+
+// Microposts /////////////////////////////////////////
+
+.microposts {
+  	list-style: none;
+  	margin: 10px 0 0 0;
+	li {
+		padding: 10px 0;
+		border-top: 1px solid #e8e8e8;
+	}
+}
+.content {
+  	display: block;
+}
+.timestamp {
+  	color: $gray-light;
+}
+.gravatar {
+	float: left;
+	margin-right: 10px;
+}
+aside {
+  	textarea {
+    	height: 100px;
+    	margin-bottom: 5px;
+  	}
 }
 
 // Misc //////////////////////////////////////
